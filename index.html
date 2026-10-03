@@ -1,1 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
 
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Send WhatsApp messages from a web browser"
+  >
+
+  <title>WhatsApp Message Sender</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="app">
+
+    <section class="card">
+
+      <div class="header">
+
+        <div class="logo">
+          W
+        </div>
+
+        <div>
+          <h1>WhatsApp Sender</h1>
+          <p>Send a message to a WhatsApp number</p>
+        </div>
+
+      </div>
+
+
+      <form id="messageForm">
+
+        <label for="phone">
+          Recipient WhatsApp Number
+        </label>
+
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="+971544425383"
+          autocomplete="tel"
+          required
+        >
+
+        <small>
+          Enter the full international number with country code.
+        </small>
+
+
+        <label for="message">
+          Message
+        </label>
+
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Type your message..."
+          maxlength="4096"
+          required
+        ></textarea>
+
+        <div class="counter">
+          <span id="counter">0</span>/4096
+        </div>
+
+
+        <button
+          type="submit"
+          id="sendButton"
+        >
+          <span id="buttonText">Send WhatsApp Message</span>
+          <span id="spinner" class="spinner hidden"></span>
+        </button>
+
+      </form>
+
+
+      <div
+        id="status"
+        class="status hidden"
+        role="alert"
+      ></div>
+
+
+      <div class="notice">
+        <strong>Privacy:</strong>
+        Your Meta access token is not stored in this website.
+        It is kept securely on the Cloudflare Worker.
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
